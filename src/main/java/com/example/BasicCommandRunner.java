@@ -16,6 +16,9 @@ public class BasicCommandRunner {
                 case "cd":
                     com.example.command.CdCommand.main(commandArgs);
                     break;
+                case "sort":
+                com.example.command.SortCommand.main(commandArgs);
+                    break;
                 default:
                     System.err.println("不明なコマンドです: " + command);
                     System.err.println("使用可能なコマンド: ls, pwd, cd");
@@ -23,7 +26,7 @@ public class BasicCommandRunner {
             }
         } else {
             System.err.println("実行するコマンドを指定してください (例: java -jar java-basic-command-1.0-SNAPSHOT.jar ls)");
-            System.err.println("使用可能なコマンド: ls, pwd, cd");
+            System.err.println("使用可能なコマンド: ls, pwd, cd, sort");
         }
     }
 }
